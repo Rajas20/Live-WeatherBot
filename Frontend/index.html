@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🌦️ Live WeatherBot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+  </script>
+
+</head>
+<body>
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">
+        <i class="fas fa-cloud-sun"></i>
+        Live WeatherBot
+      </h1>
+      <p class="tagline">Your Personal Weather Assistant</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Search Section -->
+      <section class="search-section">
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input 
+              type="text" 
+              id="cityInput" 
+              placeholder="Enter City Name"
+              class="search-input"
+            >
+          </div>
+          <button onclick="getWeather()" class="btn btn-primary">
+            <i class="fas fa-cloud-sun"></i>
+            Get Weather
+          </button>
+          <button class="btn btn-refresh" onclick="refreshWeather()">
+            <i class="fas fa-sync-alt"></i>
+            Refresh
+          </button>
+        </div>
+      </section>
+
+      <!-- Loading Spinner -->
+      <div id="loadingSpinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+        <p>Fetching weather data...</p>
+      </div>
+
+      <!-- Current Weather Section -->
+      <section class="weather-section">
+        <div class="weather-card" id="weatherResult">
+        
+          <!-- Weather data will be populated here -->
+        </div>
+        
+      </section>
+
+      <!-- Forecast Section -->
+      <section class="forecast-section">
+        <div class="forecast-header">
+          <h2><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h2>
+        </div>
+        <div class="forecast-container" id="forecastContainer">
+          <!-- Forecast cards will be populated here -->
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="map-section">
+        <div id="map" style="height: 300px; margin-top: 20px; border-radius: 12px;"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
