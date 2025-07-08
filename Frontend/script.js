@@ -77,7 +77,7 @@ function getWeather() {
   lastCity = city;
   showLoading();
 
-  fetch("http://127.0.0.1:5000/weather", {
+  fetch("https://live-weatherbot.onrender.com/weather", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ city }),
@@ -126,7 +126,7 @@ function getWeatherByCoords(lat, lon) {
 
   showLoading();
 
-  fetch("http://127.0.0.1:5000/weather", {
+  fetch("https://live-weatherbot.onrender.com/weather", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ lat, lon }),
@@ -207,7 +207,7 @@ function displayCurrentWeather(cityName, temperature, condition, humidity, icon)
 }
 
 function getForecast(lat, lon) {
-  fetch("http://127.0.0.1:5000/forecast", {
+  fetch("https://live-weatherbot.onrender.com/forecast", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ lat, lon }),
