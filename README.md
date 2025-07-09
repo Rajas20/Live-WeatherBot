@@ -64,7 +64,7 @@ WeatherBot/
 ---
 
 
-🛰️ Deployment
+## 🛰️ Deployment
 Frontend deployed on Vercel
 
 Backend deployed on Render
@@ -75,8 +75,7 @@ CORS enabled to allow secure cross-origin communication
 ---
 
 
-
-🙌 Acknowledgements
+## 🙌 Acknowledgements
 OpenWeather API
 
 Tomorrow.io Forecast API
