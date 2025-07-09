@@ -47,7 +47,7 @@
 
 
 ## 📁 Project Structure
-
+```
 WeatherBot/
 │
 ├── Backend/
@@ -59,7 +59,7 @@ WeatherBot/
 │ ├── index.html
 │ ├── style.css
 │ └── script.js
-
+```
 
 ---
 
